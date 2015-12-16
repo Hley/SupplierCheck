@@ -1,0 +1,14 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: '3306'
+    database_name: suppliercheck
+    database_user: root
+    database_password: root
+    mailer_transport: smtp
+    mailer_host: ~
+    mailer_user:  
+    mailer_password: 
+    locale: fr
+    secret: 35f9717938e7cdfe2a2dcc53edae53a3

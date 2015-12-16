@@ -1,0 +1,122 @@
+
+ # Acme/DemoBundle/Resources/config/admin.yml
+services:
+
+
+    sonata.admin.user:
+        class: Suppliercheck\AdminBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Utilisateurs", label: "User" }
+        arguments:
+            - ~
+            - Suppliercheck\UserBundle\Entity\user
+            - ~
+        calls:
+            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+            
+    sonata.admin.group:
+        class: Suppliercheck\AdminBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Utilisateurs", label: "Groupes" }
+        arguments:
+            - ~
+            - Suppliercheck\UserBundle\Entity\group
+            - ~
+        calls:
+            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+
+    sonata.admin.Campaign:
+        class: Suppliercheck\AdminBundle\Admin\CampaignAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Campaign" }
+        arguments:
+            - ~
+            - Suppliercheck\AdminBundle\Entity\Campaign
+            - SuppliercheckAdminBundle:Campaign            
+            - ~
+        calls:
+            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+            - [addChild, ['@Sonata.admin.Product']]
+
+    sonata.admin.CampaignValidation:
+        class: Suppliercheck\AdminBundle\Admin\CampaignSupplier
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Supplier", label: "Campaign Validation" }
+        arguments:
+            - ~
+            - Suppliercheck\AdminBundle\Entity\Campaign
+            - SuppliercheckAdminBundle:Campaign
+            - ~
+        calls:
+            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+            - [addChild, ['@Sonata.admin.ProductValidation']]
+        
+                    
+    sonata.admin.Comment:
+        class: Suppliercheck\AdminBundle\Admin\CommentAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Comment" }
+        arguments:
+            - ~
+            - Suppliercheck\AdminBundle\Entity\Comment
+            - ~
+        calls:
+            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+                           
+                      
+    sonata.admin.Product:
+        class: Suppliercheck\AdminBundle\Admin\ProductAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Product" }
+        arguments:
+            - ~
+            - Suppliercheck\AdminBundle\Entity\Product
+ #            - SuppliercheckAdminBundle:Product
+            - ~
+        calls:
+            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+            - [addChild, ['@Sonata.admin.comment']]
+            
+            
+    sonata.admin.ProductValidation:
+        class: Suppliercheck\AdminBundle\Admin\ProductValidationAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Supplier", label: "Product Validation" }
+        arguments:
+            - ~
+            - Suppliercheck\AdminBundle\Entity\Product
+            - SuppliercheckAdminBundle:Product
+            - ~
+        calls:
+            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+            - [addChild, ['@Sonata.admin.comment']]
+                               
+#
+#    sonata.admin.Data:
+#        class: Suppliercheck\AdminBundle\Admin\DataAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Data" }
+#        arguments:
+#            - ~
+#            - Suppliercheck\AdminBundle\Entity\Data
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+#            
+#    sonata.admin.csv:
+#        class: Suppliercheck\AdminBundle\Admin\CsvAdmin
+#        tags:
+#            - { name: sonata.admin, manager_type: orm, group: "Widgets", label: "Csv", show_in_dashboard: true }
+#        arguments:
+#            - ~
+#            - Suppliercheck\AdminBundle\Entity\csv
+#            - ~
+#        calls:
+#            - [ setTranslationDomain, [SuppliercheckAdminBundle]]
+
+#
+#    admin.block.service.importcsv:
+#        class: Suppliercheck\AdminBundle\Block\ImportCSVService
+#        arguments: [ "admin.block.service.importcsv", @templating, @service_container ]
+#        tags:
+#            - { name: sonata.block }

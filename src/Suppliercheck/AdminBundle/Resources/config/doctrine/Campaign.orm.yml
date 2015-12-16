@@ -1,0 +1,99 @@
+Suppliercheck\AdminBundle\Entity\Campaign:
+#  type: entity
+#  table: campaign_01
+#  fields:
+#    id:
+#      type: integer
+#      id: true
+#      generator:
+#        strategy: AUTO
+#    checker:
+#      type: text
+#      length: 255
+#      nullable: false
+#    supplierName:
+#      type: text
+#      length: 255
+#      nullable: false
+#    status:
+#      type: text
+#      length: 255
+#      nullable: true
+##  oneToMany:
+##    products:
+##      targetEntity: Data
+##      orphanRemoval: true
+##      mappedBy: campaign
+##      cascade: ["persist", "merge"]
+#  lifecycleCallbacks: { }
+  type: entity
+  table: campaign
+  id:
+    id:
+      type: integer
+      generator: { strategy: auto }
+        
+  fields:
+    checker:
+      type: text
+      length: 255
+      nullable: false
+    supplierName:
+      type: text
+      length: 255
+      nullable: false
+    name:
+      type: text
+      length: 255
+      nullable: false
+    supplierEmail:
+      type: text
+      length: 255
+      nullable: false      
+    status:
+      type: boolean
+      nullable: true
+    expires_at:
+      type: datetime
+      nullable: true
+    created_at:
+      type: datetime
+      nullable: true   
+    updated_at:
+      type: datetime
+      nullable: true
+    start_date:
+      type: datetime
+      nullable: false
+    end_date:
+      type: datetime
+      nullable: false
+    check_date:
+      type: datetime
+      nullable: false
+    globalComment:
+      type: text
+      length: 255
+      nullable: true
+    totalItems:
+      type: integer
+      nullable: true
+    urlencode: 
+       type : text
+       nullable : true
+    
+      
+  oneToMany:
+    products:
+      targetEntity: Product
+      mappedBy: campaign
+      orphanRemoval: true
+      cascade: [persist]
+      joinColumn:
+        name: id
+        referencedColumnName: campaign_id
+      
+      
+  lifecycleCallbacks:
+      prePersist: [ setCreatedAtValue ]
+      preUpdate: [ setUpdatedAtValue ]

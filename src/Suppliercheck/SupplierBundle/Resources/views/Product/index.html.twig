@@ -1,0 +1,310 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Product list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Idcatalogsimple</th>
+                <th>Config</th>
+                <th>Import</th>
+                <th>Sku</th>
+                <th>Createdatexternal</th>
+                <th>Updatedatexternal</th>
+                <th>Price</th>
+                <th>Specialprice</th>
+                <th>Specialfromdate</th>
+                <th>Specialtodate</th>
+                <th>Taxclass</th>
+                <th>Taxclass2</th>
+                <th>Originalprice</th>
+                <th>Baseprice</th>
+                <th>Barcodeean</th>
+                <th>Skusuppliersimple</th>
+                <th>Suppliersimplename</th>
+                <th>Shipmenttype</th>
+                <th>Transporttype</th>
+                <th>Isglobal</th>
+                <th>Shipmentcost</th>
+                <th>Shipmentcostcomment</th>
+                <th>Dreamroomshowinimagemap</th>
+                <th>Dreamroomimagemapx</th>
+                <th>Dreamroomimagemapy</th>
+                <th>Xcartsku</th>
+                <th>Deliverydatestart</th>
+                <th>Deliverydateend</th>
+                <th>Docdataean</th>
+                <th>Docdatadescription</th>
+                <th>Docdataweight</th>
+                <th>Customidentifier</th>
+                <th>Expecteddeliverydatestart</th>
+                <th>Expecteddeliverydateend</th>
+                <th>Navisionflag</th>
+                <th>Deliverydaymin</th>
+                <th>Deliverydaymax</th>
+                <th>Additionalinboundinfo</th>
+                <th>Expectedgm1</th>
+                <th>Expectedgm2</th>
+                <th>Expectedgm3</th>
+                <th>Sumgrossweight</th>
+                <th>Numberseparatepackages</th>
+                <th>Delayreasons</th>
+                <th>Hideoriginalprice</th>
+                <th>Producername</th>
+                <th>Produceraddress</th>
+                <th>Additional2mhservice</th>
+                <th>Additional2mhserviceprice</th>
+                <th>Isbundle</th>
+                <th>Idcatalogconfigwestwing</th>
+                <th>Designscout</th>
+                <th>Logisticlead</th>
+                <th>Idcatalogsimplewestwing</th>
+                <th>Simple</th>
+                <th>Variation</th>
+                <th>Brand</th>
+                <th>Supplier</th>
+                <th>Supplieridentifier</th>
+                <th>Configgroup</th>
+                <th>Attributeset</th>
+                <th>Categories</th>
+                <th>Idcatalogconfig</th>
+                <th>Skuconfig</th>
+                <th>Statusconfig</th>
+                <th>Name</th>
+                <th>Nameother</th>
+                <th>Description</th>
+                <th>Editoropinion</th>
+                <th>Choiceofdescription</th>
+                <th>Displayasoutofstock</th>
+                <th>Petstatus</th>
+                <th>Petapproved</th>
+                <th>Activatedat</th>
+                <th>Skusupplierconfig</th>
+                <th>Namesupplier</th>
+                <th>Origin</th>
+                <th>Deliveryperiod</th>
+                <th>Note</th>
+                <th>Designer</th>
+                <th>Color</th>
+                <th>Mainmaterial</th>
+                <th>Finish</th>
+                <th>Measures</th>
+                <th>Weight</th>
+                <th>Details</th>
+                <th>Packageheight</th>
+                <th>Packagelength</th>
+                <th>Packagewidth</th>
+                <th>Packageweight</th>
+                <th>Shortdescription</th>
+                <th>Carelabel</th>
+                <th>Nextsimplenr</th>
+                <th>Brandnameforthemecampaigns</th>
+                <th>Adventday</th>
+                <th>Adventurl</th>
+                <th>Adventpath</th>
+                <th>Overwritedeliveryperiod</th>
+                <th>Isseorelevant</th>
+                <th>Exportstatic</th>
+                <th>Ishybrisproduct</th>
+                <th>Hasdeliveryguarantee</th>
+                <th>Netpurchaseprice</th>
+                <th>Netpurchasepricediscounted</th>
+                <th>Supplierproductnumber</th>
+                <th>Supplierproductname</th>
+                <th>Localstock</th>
+                <th>Globalstock</th>
+                <th>Package1length</th>
+                <th>Package1height</th>
+                <th>Package1width</th>
+                <th>Package1weight</th>
+                <th>Package2length</th>
+                <th>Package2height</th>
+                <th>Package2width</th>
+                <th>Package2weight</th>
+                <th>Package3length</th>
+                <th>Package3height</th>
+                <th>Package3width</th>
+                <th>Package3weight</th>
+                <th>Color1</th>
+                <th>Color2</th>
+                <th>Color3</th>
+                <th>Colorcharacteristic</th>
+                <th>Position</th>
+                <th>Additionalcampaigns</th>
+                <th>Statussimple</th>
+                <th>Expectedlogisticscost</th>
+                <th>Discountlevel</th>
+                <th>Blowoutround</th>
+                <th>Allowmultiplepo</th>
+                <th>Campaign_id</th>
+                <th>Expires_at</th>
+                <th>Created_at</th>
+                <th>Updated_at</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('supplier_product_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.idCatalogSimple }}</td>
+                <td>{{ entity.config }}</td>
+                <td>{{ entity.import }}</td>
+                <td>{{ entity.sku }}</td>
+                <td>{{ entity.createdAtExternal }}</td>
+                <td>{{ entity.updatedAtExternal }}</td>
+                <td>{{ entity.price }}</td>
+                <td>{{ entity.specialPrice }}</td>
+                <td>{{ entity.specialFromDate }}</td>
+                <td>{{ entity.specialToDate }}</td>
+                <td>{{ entity.taxClass }}</td>
+                <td>{{ entity.taxClass2 }}</td>
+                <td>{{ entity.originalPrice }}</td>
+                <td>{{ entity.basePrice }}</td>
+                <td>{{ entity.barcodeEan }}</td>
+                <td>{{ entity.skuSupplierSimple }}</td>
+                <td>{{ entity.supplierSimpleName }}</td>
+                <td>{{ entity.shipmentType }}</td>
+                <td>{{ entity.transportType }}</td>
+                <td>{{ entity.isGlobal }}</td>
+                <td>{{ entity.shipmentCost }}</td>
+                <td>{{ entity.shipmentCostComment }}</td>
+                <td>{{ entity.dreamroomShowInImageMap }}</td>
+                <td>{{ entity.dreamroomImageMapX }}</td>
+                <td>{{ entity.dreamroomImageMapY }}</td>
+                <td>{{ entity.xcartSku }}</td>
+                <td>{{ entity.deliveryDateStart }}</td>
+                <td>{{ entity.deliveryDateEnd }}</td>
+                <td>{{ entity.docdataEan }}</td>
+                <td>{{ entity.docdataDescription }}</td>
+                <td>{{ entity.docdataWeight }}</td>
+                <td>{{ entity.customIdentifier }}</td>
+                <td>{{ entity.expectedDeliveryDateStart }}</td>
+                <td>{{ entity.expectedDeliveryDateEnd }}</td>
+                <td>{{ entity.navisionFlag }}</td>
+                <td>{{ entity.deliveryDayMin }}</td>
+                <td>{{ entity.deliveryDayMax }}</td>
+                <td>{{ entity.additionalInboundInfo }}</td>
+                <td>{{ entity.expectedGm1 }}</td>
+                <td>{{ entity.expectedGm2 }}</td>
+                <td>{{ entity.expectedGm3 }}</td>
+                <td>{{ entity.sumGrossWeight }}</td>
+                <td>{{ entity.numberSeparatePackages }}</td>
+                <td>{{ entity.delayReasons }}</td>
+                <td>{{ entity.hideOriginalPrice }}</td>
+                <td>{{ entity.producerName }}</td>
+                <td>{{ entity.producerAddress }}</td>
+                <td>{{ entity.additional2mhService }}</td>
+                <td>{{ entity.additional2mhServicePrice }}</td>
+                <td>{{ entity.isBundle }}</td>
+                <td>{{ entity.idCatalogConfigWestwing }}</td>
+                <td>{{ entity.designScout }}</td>
+                <td>{{ entity.logisticLead }}</td>
+                <td>{{ entity.idCatalogSimpleWestwing }}</td>
+                <td>{{ entity.simple }}</td>
+                <td>{{ entity.variation }}</td>
+                <td>{{ entity.brand }}</td>
+                <td>{{ entity.supplier }}</td>
+                <td>{{ entity.supplierIdentifier }}</td>
+                <td>{{ entity.configGroup }}</td>
+                <td>{{ entity.attributeSet }}</td>
+                <td>{{ entity.categories }}</td>
+                <td>{{ entity.idCatalogConfig }}</td>
+                <td>{{ entity.skuConfig }}</td>
+                <td>{{ entity.statusConfig }}</td>
+                <td>{{ entity.name }}</td>
+                <td>{{ entity.nameOther }}</td>
+                <td>{{ entity.description }}</td>
+                <td>{{ entity.editorOpinion }}</td>
+                <td>{{ entity.choiceOfDescription }}</td>
+                <td>{{ entity.displayAsOutOfStock }}</td>
+                <td>{{ entity.petStatus }}</td>
+                <td>{{ entity.petApproved }}</td>
+                <td>{{ entity.activatedAt }}</td>
+                <td>{{ entity.skuSupplierConfig }}</td>
+                <td>{{ entity.nameSupplier }}</td>
+                <td>{{ entity.origin }}</td>
+                <td>{{ entity.deliveryPeriod }}</td>
+                <td>{{ entity.note }}</td>
+                <td>{{ entity.designer }}</td>
+                <td>{{ entity.color }}</td>
+                <td>{{ entity.mainMaterial }}</td>
+                <td>{{ entity.finish }}</td>
+                <td>{{ entity.measures }}</td>
+                <td>{{ entity.weight }}</td>
+                <td>{{ entity.details }}</td>
+                <td>{{ entity.packageHeight }}</td>
+                <td>{{ entity.packageLength }}</td>
+                <td>{{ entity.packageWidth }}</td>
+                <td>{{ entity.packageWeight }}</td>
+                <td>{{ entity.shortDescription }}</td>
+                <td>{{ entity.careLabel }}</td>
+                <td>{{ entity.nextSimpleNr }}</td>
+                <td>{{ entity.brandNameForThemeCampaigns }}</td>
+                <td>{{ entity.adventDay }}</td>
+                <td>{{ entity.adventUrl }}</td>
+                <td>{{ entity.adventPath }}</td>
+                <td>{{ entity.overwriteDeliveryPeriod }}</td>
+                <td>{{ entity.isSeoRelevant }}</td>
+                <td>{{ entity.exportStatic }}</td>
+                <td>{{ entity.isHybrisProduct }}</td>
+                <td>{{ entity.hasDeliveryGuarantee }}</td>
+                <td>{{ entity.netPurchasePrice }}</td>
+                <td>{{ entity.netPurchasePriceDiscounted }}</td>
+                <td>{{ entity.supplierProductNumber }}</td>
+                <td>{{ entity.supplierProductName }}</td>
+                <td>{{ entity.localStock }}</td>
+                <td>{{ entity.globalStock }}</td>
+                <td>{{ entity.package1Length }}</td>
+                <td>{{ entity.package1Height }}</td>
+                <td>{{ entity.package1Width }}</td>
+                <td>{{ entity.package1Weight }}</td>
+                <td>{{ entity.package2Length }}</td>
+                <td>{{ entity.package2Height }}</td>
+                <td>{{ entity.package2Width }}</td>
+                <td>{{ entity.package2Weight }}</td>
+                <td>{{ entity.package3Length }}</td>
+                <td>{{ entity.package3Height }}</td>
+                <td>{{ entity.package3Width }}</td>
+                <td>{{ entity.package3Weight }}</td>
+                <td>{{ entity.color1 }}</td>
+                <td>{{ entity.color2 }}</td>
+                <td>{{ entity.color3 }}</td>
+                <td>{{ entity.colorCharacteristic }}</td>
+                <td>{{ entity.position }}</td>
+                <td>{{ entity.additionalCampaigns }}</td>
+                <td>{{ entity.statusSimple }}</td>
+                <td>{{ entity.expectedLogisticsCost }}</td>
+                <td>{{ entity.discountLevel }}</td>
+                <td>{{ entity.blowoutRound }}</td>
+                <td>{{ entity.allowMultiplePo }}</td>
+                <td>{{ entity.campaignid }}</td>
+                <td>{% if entity.expiresat %}{{ entity.expiresat|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.createdat %}{{ entity.createdat|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{% if entity.updatedat %}{{ entity.updatedat|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td><img src="{{ entity.link  }}" /></td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('supplier_product_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('supplier_product_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('supplier_product_new') }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

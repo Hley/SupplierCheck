@@ -1,0 +1,7 @@
+parameters:
+#    suppliercheck_user.example.class: Suppliercheck\UserBundle\Example
+
+services:
+#    suppliercheck_user.example:
+#        class: %suppliercheck_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,35 @@
+supplier_campaign:
+    path:     /
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:index" }
+
+supplier_campaign_show:
+    path:     /{id}/show
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:show" }
+
+supplier_campaign_new:
+    path:     /new
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:new" }
+
+supplier_campaign_create:
+    path:     /create
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:create" }
+    requirements: { _method: post }
+
+supplier_campaign_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:edit" }
+
+supplier_campaign_update:
+    path:     /{id}/update
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:update" }
+    requirements: { _method: post|put }
+
+supplier_campaign_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:delete" }
+    requirements: { _method: post|delete }
+    
+    
+supplier_campaign_confirm:
+    path:     /{id}/confirm
+    defaults: { _controller: "SuppliercheckSupplierBundle:Campaign:confirm" }    

@@ -1,0 +1,568 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Product</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Idcatalogsimple</th>
+                <td>{{ entity.idCatalogSimple }}</td>
+            </tr>
+            <tr>
+                <th>Config</th>
+                <td>{{ entity.config }}</td>
+            </tr>
+            <tr>
+                <th>Import</th>
+                <td>{{ entity.import }}</td>
+            </tr>
+            <tr>
+                <th>Sku</th>
+                <td>{{ entity.sku }}</td>
+            </tr>
+            <tr>
+                <th>Createdatexternal</th>
+                <td>{{ entity.createdAtExternal }}</td>
+            </tr>
+            <tr>
+                <th>Updatedatexternal</th>
+                <td>{{ entity.updatedAtExternal }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ entity.price }}</td>
+            </tr>
+            <tr>
+                <th>Specialprice</th>
+                <td>{{ entity.specialPrice }}</td>
+            </tr>
+            <tr>
+                <th>Specialfromdate</th>
+                <td>{{ entity.specialFromDate }}</td>
+            </tr>
+            <tr>
+                <th>Specialtodate</th>
+                <td>{{ entity.specialToDate }}</td>
+            </tr>
+            <tr>
+                <th>Taxclass</th>
+                <td>{{ entity.taxClass }}</td>
+            </tr>
+            <tr>
+                <th>Taxclass2</th>
+                <td>{{ entity.taxClass2 }}</td>
+            </tr>
+            <tr>
+                <th>Originalprice</th>
+                <td>{{ entity.originalPrice }}</td>
+            </tr>
+            <tr>
+                <th>Baseprice</th>
+                <td>{{ entity.basePrice }}</td>
+            </tr>
+            <tr>
+                <th>Barcodeean</th>
+                <td>{{ entity.barcodeEan }}</td>
+            </tr>
+            <tr>
+                <th>Skusuppliersimple</th>
+                <td>{{ entity.skuSupplierSimple }}</td>
+            </tr>
+            <tr>
+                <th>Suppliersimplename</th>
+                <td>{{ entity.supplierSimpleName }}</td>
+            </tr>
+            <tr>
+                <th>Shipmenttype</th>
+                <td>{{ entity.shipmentType }}</td>
+            </tr>
+            <tr>
+                <th>Transporttype</th>
+                <td>{{ entity.transportType }}</td>
+            </tr>
+            <tr>
+                <th>Isglobal</th>
+                <td>{{ entity.isGlobal }}</td>
+            </tr>
+            <tr>
+                <th>Shipmentcost</th>
+                <td>{{ entity.shipmentCost }}</td>
+            </tr>
+            <tr>
+                <th>Shipmentcostcomment</th>
+                <td>{{ entity.shipmentCostComment }}</td>
+            </tr>
+            <tr>
+                <th>Dreamroomshowinimagemap</th>
+                <td>{{ entity.dreamroomShowInImageMap }}</td>
+            </tr>
+            <tr>
+                <th>Dreamroomimagemapx</th>
+                <td>{{ entity.dreamroomImageMapX }}</td>
+            </tr>
+            <tr>
+                <th>Dreamroomimagemapy</th>
+                <td>{{ entity.dreamroomImageMapY }}</td>
+            </tr>
+            <tr>
+                <th>Xcartsku</th>
+                <td>{{ entity.xcartSku }}</td>
+            </tr>
+            <tr>
+                <th>Deliverydatestart</th>
+                <td>{{ entity.deliveryDateStart }}</td>
+            </tr>
+            <tr>
+                <th>Deliverydateend</th>
+                <td>{{ entity.deliveryDateEnd }}</td>
+            </tr>
+            <tr>
+                <th>Docdataean</th>
+                <td>{{ entity.docdataEan }}</td>
+            </tr>
+            <tr>
+                <th>Docdatadescription</th>
+                <td>{{ entity.docdataDescription }}</td>
+            </tr>
+            <tr>
+                <th>Docdataweight</th>
+                <td>{{ entity.docdataWeight }}</td>
+            </tr>
+            <tr>
+                <th>Customidentifier</th>
+                <td>{{ entity.customIdentifier }}</td>
+            </tr>
+            <tr>
+                <th>Expecteddeliverydatestart</th>
+                <td>{{ entity.expectedDeliveryDateStart }}</td>
+            </tr>
+            <tr>
+                <th>Expecteddeliverydateend</th>
+                <td>{{ entity.expectedDeliveryDateEnd }}</td>
+            </tr>
+            <tr>
+                <th>Navisionflag</th>
+                <td>{{ entity.navisionFlag }}</td>
+            </tr>
+            <tr>
+                <th>Deliverydaymin</th>
+                <td>{{ entity.deliveryDayMin }}</td>
+            </tr>
+            <tr>
+                <th>Deliverydaymax</th>
+                <td>{{ entity.deliveryDayMax }}</td>
+            </tr>
+            <tr>
+                <th>Additionalinboundinfo</th>
+                <td>{{ entity.additionalInboundInfo }}</td>
+            </tr>
+            <tr>
+                <th>Expectedgm1</th>
+                <td>{{ entity.expectedGm1 }}</td>
+            </tr>
+            <tr>
+                <th>Expectedgm2</th>
+                <td>{{ entity.expectedGm2 }}</td>
+            </tr>
+            <tr>
+                <th>Expectedgm3</th>
+                <td>{{ entity.expectedGm3 }}</td>
+            </tr>
+            <tr>
+                <th>Sumgrossweight</th>
+                <td>{{ entity.sumGrossWeight }}</td>
+            </tr>
+            <tr>
+                <th>Numberseparatepackages</th>
+                <td>{{ entity.numberSeparatePackages }}</td>
+            </tr>
+            <tr>
+                <th>Delayreasons</th>
+                <td>{{ entity.delayReasons }}</td>
+            </tr>
+            <tr>
+                <th>Hideoriginalprice</th>
+                <td>{{ entity.hideOriginalPrice }}</td>
+            </tr>
+            <tr>
+                <th>Producername</th>
+                <td>{{ entity.producerName }}</td>
+            </tr>
+            <tr>
+                <th>Produceraddress</th>
+                <td>{{ entity.producerAddress }}</td>
+            </tr>
+            <tr>
+                <th>Additional2mhservice</th>
+                <td>{{ entity.additional2mhService }}</td>
+            </tr>
+            <tr>
+                <th>Additional2mhserviceprice</th>
+                <td>{{ entity.additional2mhServicePrice }}</td>
+            </tr>
+            <tr>
+                <th>Isbundle</th>
+                <td>{{ entity.isBundle }}</td>
+            </tr>
+            <tr>
+                <th>Idcatalogconfigwestwing</th>
+                <td>{{ entity.idCatalogConfigWestwing }}</td>
+            </tr>
+            <tr>
+                <th>Designscout</th>
+                <td>{{ entity.designScout }}</td>
+            </tr>
+            <tr>
+                <th>Logisticlead</th>
+                <td>{{ entity.logisticLead }}</td>
+            </tr>
+            <tr>
+                <th>Idcatalogsimplewestwing</th>
+                <td>{{ entity.idCatalogSimpleWestwing }}</td>
+            </tr>
+            <tr>
+                <th>Simple</th>
+                <td>{{ entity.simple }}</td>
+            </tr>
+            <tr>
+                <th>Variation</th>
+                <td>{{ entity.variation }}</td>
+            </tr>
+            <tr>
+                <th>Brand</th>
+                <td>{{ entity.brand }}</td>
+            </tr>
+            <tr>
+                <th>Supplier</th>
+                <td>{{ entity.supplier }}</td>
+            </tr>
+            <tr>
+                <th>Supplieridentifier</th>
+                <td>{{ entity.supplierIdentifier }}</td>
+            </tr>
+            <tr>
+                <th>Configgroup</th>
+                <td>{{ entity.configGroup }}</td>
+            </tr>
+            <tr>
+                <th>Attributeset</th>
+                <td>{{ entity.attributeSet }}</td>
+            </tr>
+            <tr>
+                <th>Categories</th>
+                <td>{{ entity.categories }}</td>
+            </tr>
+            <tr>
+                <th>Idcatalogconfig</th>
+                <td>{{ entity.idCatalogConfig }}</td>
+            </tr>
+            <tr>
+                <th>Skuconfig</th>
+                <td>{{ entity.skuConfig }}</td>
+            </tr>
+            <tr>
+                <th>Statusconfig</th>
+                <td>{{ entity.statusConfig }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ entity.name }}</td>
+            </tr>
+            <tr>
+                <th>Nameother</th>
+                <td>{{ entity.nameOther }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.description }}</td>
+            </tr>
+            <tr>
+                <th>Editoropinion</th>
+                <td>{{ entity.editorOpinion }}</td>
+            </tr>
+            <tr>
+                <th>Choiceofdescription</th>
+                <td>{{ entity.choiceOfDescription }}</td>
+            </tr>
+            <tr>
+                <th>Displayasoutofstock</th>
+                <td>{{ entity.displayAsOutOfStock }}</td>
+            </tr>
+            <tr>
+                <th>Petstatus</th>
+                <td>{{ entity.petStatus }}</td>
+            </tr>
+            <tr>
+                <th>Petapproved</th>
+                <td>{{ entity.petApproved }}</td>
+            </tr>
+            <tr>
+                <th>Activatedat</th>
+                <td>{{ entity.activatedAt }}</td>
+            </tr>
+            <tr>
+                <th>Skusupplierconfig</th>
+                <td>{{ entity.skuSupplierConfig }}</td>
+            </tr>
+            <tr>
+                <th>Namesupplier</th>
+                <td>{{ entity.nameSupplier }}</td>
+            </tr>
+            <tr>
+                <th>Origin</th>
+                <td>{{ entity.origin }}</td>
+            </tr>
+            <tr>
+                <th>Deliveryperiod</th>
+                <td>{{ entity.deliveryPeriod }}</td>
+            </tr>
+            <tr>
+                <th>Note</th>
+                <td>{{ entity.note }}</td>
+            </tr>
+            <tr>
+                <th>Designer</th>
+                <td>{{ entity.designer }}</td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>{{ entity.color }}</td>
+            </tr>
+            <tr>
+                <th>Mainmaterial</th>
+                <td>{{ entity.mainMaterial }}</td>
+            </tr>
+            <tr>
+                <th>Finish</th>
+                <td>{{ entity.finish }}</td>
+            </tr>
+            <tr>
+                <th>Measures</th>
+                <td>{{ entity.measures }}</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>{{ entity.weight }}</td>
+            </tr>
+            <tr>
+                <th>Details</th>
+                <td>{{ entity.details }}</td>
+            </tr>
+            <tr>
+                <th>Packageheight</th>
+                <td>{{ entity.packageHeight }}</td>
+            </tr>
+            <tr>
+                <th>Packagelength</th>
+                <td>{{ entity.packageLength }}</td>
+            </tr>
+            <tr>
+                <th>Packagewidth</th>
+                <td>{{ entity.packageWidth }}</td>
+            </tr>
+            <tr>
+                <th>Packageweight</th>
+                <td>{{ entity.packageWeight }}</td>
+            </tr>
+            <tr>
+                <th>Shortdescription</th>
+                <td>{{ entity.shortDescription }}</td>
+            </tr>
+            <tr>
+                <th>Carelabel</th>
+                <td>{{ entity.careLabel }}</td>
+            </tr>
+            <tr>
+                <th>Nextsimplenr</th>
+                <td>{{ entity.nextSimpleNr }}</td>
+            </tr>
+            <tr>
+                <th>Brandnameforthemecampaigns</th>
+                <td>{{ entity.brandNameForThemeCampaigns }}</td>
+            </tr>
+            <tr>
+                <th>Adventday</th>
+                <td>{{ entity.adventDay }}</td>
+            </tr>
+            <tr>
+                <th>Adventurl</th>
+                <td>{{ entity.adventUrl }}</td>
+            </tr>
+            <tr>
+                <th>Adventpath</th>
+                <td>{{ entity.adventPath }}</td>
+            </tr>
+            <tr>
+                <th>Overwritedeliveryperiod</th>
+                <td>{{ entity.overwriteDeliveryPeriod }}</td>
+            </tr>
+            <tr>
+                <th>Isseorelevant</th>
+                <td>{{ entity.isSeoRelevant }}</td>
+            </tr>
+            <tr>
+                <th>Exportstatic</th>
+                <td>{{ entity.exportStatic }}</td>
+            </tr>
+            <tr>
+                <th>Ishybrisproduct</th>
+                <td>{{ entity.isHybrisProduct }}</td>
+            </tr>
+            <tr>
+                <th>Hasdeliveryguarantee</th>
+                <td>{{ entity.hasDeliveryGuarantee }}</td>
+            </tr>
+            <tr>
+                <th>Netpurchaseprice</th>
+                <td>{{ entity.netPurchasePrice }}</td>
+            </tr>
+            <tr>
+                <th>Netpurchasepricediscounted</th>
+                <td>{{ entity.netPurchasePriceDiscounted }}</td>
+            </tr>
+            <tr>
+                <th>Supplierproductnumber</th>
+                <td>{{ entity.supplierProductNumber }}</td>
+            </tr>
+            <tr>
+                <th>Supplierproductname</th>
+                <td>{{ entity.supplierProductName }}</td>
+            </tr>
+            <tr>
+                <th>Localstock</th>
+                <td>{{ entity.localStock }}</td>
+            </tr>
+            <tr>
+                <th>Globalstock</th>
+                <td>{{ entity.globalStock }}</td>
+            </tr>
+            <tr>
+                <th>Package1length</th>
+                <td>{{ entity.package1Length }}</td>
+            </tr>
+            <tr>
+                <th>Package1height</th>
+                <td>{{ entity.package1Height }}</td>
+            </tr>
+            <tr>
+                <th>Package1width</th>
+                <td>{{ entity.package1Width }}</td>
+            </tr>
+            <tr>
+                <th>Package1weight</th>
+                <td>{{ entity.package1Weight }}</td>
+            </tr>
+            <tr>
+                <th>Package2length</th>
+                <td>{{ entity.package2Length }}</td>
+            </tr>
+            <tr>
+                <th>Package2height</th>
+                <td>{{ entity.package2Height }}</td>
+            </tr>
+            <tr>
+                <th>Package2width</th>
+                <td>{{ entity.package2Width }}</td>
+            </tr>
+            <tr>
+                <th>Package2weight</th>
+                <td>{{ entity.package2Weight }}</td>
+            </tr>
+            <tr>
+                <th>Package3length</th>
+                <td>{{ entity.package3Length }}</td>
+            </tr>
+            <tr>
+                <th>Package3height</th>
+                <td>{{ entity.package3Height }}</td>
+            </tr>
+            <tr>
+                <th>Package3width</th>
+                <td>{{ entity.package3Width }}</td>
+            </tr>
+            <tr>
+                <th>Package3weight</th>
+                <td>{{ entity.package3Weight }}</td>
+            </tr>
+            <tr>
+                <th>Color1</th>
+                <td>{{ entity.color1 }}</td>
+            </tr>
+            <tr>
+                <th>Color2</th>
+                <td>{{ entity.color2 }}</td>
+            </tr>
+            <tr>
+                <th>Color3</th>
+                <td>{{ entity.color3 }}</td>
+            </tr>
+            <tr>
+                <th>Colorcharacteristic</th>
+                <td>{{ entity.colorCharacteristic }}</td>
+            </tr>
+            <tr>
+                <th>Position</th>
+                <td>{{ entity.position }}</td>
+            </tr>
+            <tr>
+                <th>Additionalcampaigns</th>
+                <td>{{ entity.additionalCampaigns }}</td>
+            </tr>
+            <tr>
+                <th>Statussimple</th>
+                <td>{{ entity.statusSimple }}</td>
+            </tr>
+            <tr>
+                <th>Expectedlogisticscost</th>
+                <td>{{ entity.expectedLogisticsCost }}</td>
+            </tr>
+            <tr>
+                <th>Discountlevel</th>
+                <td>{{ entity.discountLevel }}</td>
+            </tr>
+            <tr>
+                <th>Blowoutround</th>
+                <td>{{ entity.blowoutRound }}</td>
+            </tr>
+            <tr>
+                <th>Allowmultiplepo</th>
+                <td>{{ entity.allowMultiplePo }}</td>
+            </tr>
+            <tr>
+                <th>Campaign_id</th>
+                <td>{{ entity.campaignid }}</td>
+            </tr>
+            <tr>
+                <th>Expires_at</th>
+                <td>{{ entity.expiresat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Created_at</th>
+                <td>{{ entity.createdat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th>Updated_at</th>
+                <td>{{ entity.updatedat|date('Y-m-d H:i:s') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('supplier_product') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('supplier_product_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

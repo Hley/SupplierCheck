@@ -1,0 +1,10 @@
+SuppliercheckSupplierBundle_campaign:
+    resource: "@SuppliercheckSupplierBundle/Resources/config/routing/campaign.yml"
+    prefix: /campaign
+SuppliercheckSupplierBundle_product:
+    resource: "@SuppliercheckSupplierBundle/Resources/config/routing/product.yml"
+    prefix: /product
+
+suppliercheck_supplier_homepage:
+    path:     /supplier/hello/{name}
+    defaults: { _controller: SuppliercheckSupplierBundle:Default:index }

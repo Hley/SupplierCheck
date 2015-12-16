@@ -1,0 +1,40 @@
+suppliercheck_supplier:
+    resource: "@SuppliercheckSupplierBundle/Resources/config/routing.yml"
+    prefix:   /
+
+suppliercheck_user:
+    resource: "@SuppliercheckUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+suppliercheck_admin:
+    resource: "@SuppliercheckAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
+#westwing_user:
+#    resource: "@SuppliercheckAdminBundle/Resources/config/routing.yml"
+#    prefix:   /
+
+#westwing_supplier_check:
+ #   resource: "@WestwingSupplierCheckBundle/Resources/config/routing.yml"
+  #  prefix:   /
+
+
+# app/config/routing.yml
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin
+sonata_user:
+    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+    prefix: /admin
+    
+    
+_supplier:
+    resource: .
+    type: sonata_admin
+    prefix: /supplier

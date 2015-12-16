@@ -1,0 +1,30 @@
+supplier_product:
+    path:     /
+    defaults: { _controller: "SuppliercheckSupplierBundle:Product:index" }
+
+supplier_product_show:
+    path:     /{id}/show
+    defaults: { _controller: "SuppliercheckSupplierBundle:Product:show" }
+
+supplier_product_new:
+    path:     /new
+    defaults: { _controller: "SuppliercheckSupplierBundle:Product:new" }
+
+supplier_product_create:
+    path:     /create
+    defaults: { _controller: "SuppliercheckSupplierBundle:Product:create" }
+    requirements: { _method: post }
+
+supplier_product_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "SuppliercheckSupplierBundle:Product:edit" }
+
+supplier_product_update:
+    path:     /{id}/update
+    defaults: { _controller: "SuppliercheckSupplierBundle:Product:update" }
+    requirements: { _method: post|put }
+
+supplier_product_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "SuppliercheckSupplierBundle:Product:delete" }
+    requirements: { _method: post|delete }

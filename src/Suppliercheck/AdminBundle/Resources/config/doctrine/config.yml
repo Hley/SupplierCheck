@@ -1,0 +1,89 @@
+ #FOS User bundle Configuration
+fos_user:
+ 
+    db_driver:      orm # can be orm or odm
+    firewall_name:  main
+    user_class:     Suppliercheck\UserBundle\Entity\User
+
+    group:
+        group_class:   Suppliercheck\UserBundle\Entity\Group        
+        group_manager: sonata.user.orm.group_manager                    # If you're using doctrine orm (use sonata.user.mongodb.user_manager for mongodb)
+
+
+    profile:  # Authentication Form
+        form:
+            type:               fos_user_profile
+            handler:            fos_user.profile.form.handler.default
+            name:               fos_user_profile_form
+            validation_groups:  [Authentication] # Please note : this is not the default value
+    service:
+        user_manager: sonata.user.orm.user_manager        
+    
+ #Sonata Admin
+ 
+ # app/config/config.yml
+#sonata_block:
+#    default_contexts: [cms]
+#    blocks:
+#        # Enable the SonataAdminBundle block
+#        sonata.admin.block.admin_list:
+#            contexts:   [admin]
+        # Your other blocks   
+sonata_block:
+    default_contexts: [sonata_page_bundle]
+    blocks:
+        sonata.admin.block.admin_list:
+            contexts:   [admin]
+        admin.block.service.importcsv: ~
+        sonata.block.service.text:
+        sonata.block.service.rss:
+       # sonata.user.block.menu:    # used to display the menu in profile pages
+       # sonata.user.block.account: # used to display menu option (login option)
+      #  sonata.block.service.text: # used to if you plan to use Sonata user routes
+            
+    default_contexts: [cms]
+   # blocks:
+       #sonata.admin.block.admin_list:
+        #    contexts: [admin]
+        #admin.block.service.importcsv: ~
+        #sonata.admin_doctrine_orm.block.audit:
+        #    contexts:   [admin]
+        #sonata.block.service.text:
+        #sonata.block.service.rss:
+      
+
+        # Some specific block from the SonataMediaBundle
+        #sonata.media.block.media:
+        #sonata.media.block.gallery:
+        #sonata.media.block.feature_media:
+sonata_admin:
+    title:      SupplierCheck
+    title_logo: bundles/suppliercheckadmin/images/supplierCheck.png
+    
+    dashboard:
+         blocks:
+             # display a dashboard block
+             - { position: left, type: sonata.admin.block.admin_list }
+             - { position: right, type: admin.block.service.importcsv }
+             
+             
+sonata_user:
+    security_acl: true
+    manager_type: orm # can be orm or mongodb
+    class:
+        user: Suppliercheck\UserBundle\Entity\User
+        group: Suppliercheck\UserBundle\Entity\Group
+
+    profile:  # Profile Form (firstname, lastname, etc ...)
+        form:
+            type:               sonata_user_profile
+            handler:            sonata.user.profile.form.handler.default
+            name:               sonata_user_profile_form
+            validation_groups:  [Profile]    
+
+services:
+    admin.block.service.importcsv:
+       class: Suppliercheck\AdminBundle\Block\ImportCSVService
+       arguments: [ "admin.block.service.importcsv", @templating, @service_container ]
+       tags:
+         - { name: sonata.block }

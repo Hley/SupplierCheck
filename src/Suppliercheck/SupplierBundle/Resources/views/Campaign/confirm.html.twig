@@ -1,0 +1,33 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>Campaign Validation</h1>
+
+    {{ form(confirm_form) }}
+    
+        {% for product in products %}
+                <td>{{ product.price }}</td>
+                <td>{{ product.description }}</td>
+               	<td>{{ product.color }}</td>
+               	<td>{{ product.measures }}</td>
+               	<td>{{ product.details }}</td>
+               	<td>{{ product.netPurchasePrice }}</td>
+               	<td>{{ product.localStock }}</td>
+
+               
+                
+        
+            <!-- Display only 5 results and stop -->
+
+        {% endfor %}
+
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('supplier_campaign') }}">
+            Back to the list
+        </a>
+    </li>
+</ul>
+{% endblock %}

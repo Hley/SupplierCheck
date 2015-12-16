@@ -1,0 +1,10 @@
+{% extends 'SonataAdminBundle:CRUD:base_list_field.html.twig' %}
+{% block field %}
+<div width="30%">
+    {% if object.link != null %}
+    <img src="{{ object.link }}" href="{{ object.link }}" width="100px" id="CIAOCIAOA">
+    {% else %}
+    <span>No picture</span>
+    {% endif %}
+</div>
+{% endblock %}

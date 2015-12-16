@@ -1,0 +1,721 @@
+Suppliercheck\AdminBundle\Entity\Product:
+#    type: entity
+#    table: product_01
+#    repositoryClass: Suppliercheck\AdminBundle\Entity\ProductRepository
+#    fields:
+#        id:
+#            type: integer
+#            id: true
+#            generator:
+#                strategy: AUTO
+#        name:
+#            type: string
+#            length: 255
+#            column: Name
+#            nullable: true
+#        description:
+#            type: text
+#            nullable: true            
+#        quantity:
+#            type: integer
+#            nullable: true            
+#            
+#    lifecycleCallbacks: {  }
+    type: entity
+    table: product
+    id:
+      id:
+        type: integer
+        generator: { strategy: AUTO }
+    fields:
+         idCatalogSimple:
+             type: text
+             length: 255
+             nullable: true
+             column: id_catalog_simple
+         config:
+             type: text
+             length: 255
+             nullable: true
+         import:
+             type: text
+             length: 255
+             nullable: true
+         sku:
+             type: text
+             length: 255
+             nullable: true
+         createdAtExternal:
+             type: string
+             nullable: true 
+             column: created_at_external        
+         updatedAtExternal:
+             type: text
+             nullable: true
+             column: updated_at_external
+         price:
+             type: text
+             length: 255
+             nullable: true
+         specialPrice:
+             type: text
+             length: 255
+             nullable: true
+             column: special_price
+         specialFromDate:
+             type: string
+             nullable: true
+             column: special_from_date
+         specialToDate:
+             type: string
+             nullable: true
+             column: special_to_date
+         taxClass:
+             type: text
+             nullable: true
+             length: 255
+             column: tax_class
+         taxClass2:
+             type: text
+             nullable: true
+             length: 255
+             column: tax_class_2
+         originalPrice:
+             type: text
+             nullable: true
+             length: 255
+             column: original_price
+         basePrice:
+             type: text
+             length: 255
+             nullable: true
+             column: base_price
+         barcodeEan:
+             type: text
+             length: 255
+             nullable: true
+             column: barcode_ean
+         skuSupplierSimple:
+             type: text
+             length: 255
+             nullable: true
+             column: sku_supplier_simple
+         supplierSimpleName:
+             type: text
+             length: 255
+             nullable: true
+             column: supplier_simple_name
+         shipmentType:
+             type: text
+             nullable: true
+             length: 255
+             column: shipment_type
+         transportType:
+             type: text
+             nullable: true
+             length: 255
+             column: transport_type
+         isGlobal:
+             type: text
+             nullable: true
+             length: 255
+             column: is_global
+         shipmentCost:
+             type: text
+             nullable: true
+             length: 255
+             column: shipment_cost
+         shipmentCostComment:
+             type: text
+             nullable: true
+             length: 255
+             column: shipment_cost_comment
+         dreamroomShowInImageMap:
+             type: text
+             nullable: true
+             length: 255
+             column: dreamroom_show_in_image_map
+         dreamroomImageMapX:
+             type: text
+             nullable: true
+             length: 255
+             column: dreamroom_image_map_x
+         dreamroomImageMapY:
+             type: text
+             nullable: true
+             length: 255
+             column: dreamroom_image_map_y
+         xcartSku:
+             type: text
+             nullable: true
+             length: 255
+             column: xcart_sku
+         deliveryDateStart:
+             type: string
+             nullable: true
+             column: delivery_date_start
+         deliveryDateEnd:
+             type: string
+             nullable: true
+             column: delivery_date_end
+         docdataEan:
+             type: text
+             nullable: true
+             length: 255
+             column: docdata_ean
+         docdataDescription:
+             type: text
+             length: 255
+             nullable: true
+             column: docdata_description
+         docdataWeight:
+             type: text
+             length: 255
+             nullable: true
+             column: docdata_weight
+         customIdentifier:
+             type: text
+             nullable: true
+             length: 255
+             column: custom_identifier
+         expectedDeliveryDateStart:
+             type: text
+             nullable: true
+             length: 255
+             column: expected_delivery_date_start
+         expectedDeliveryDateEnd:
+             type: text
+             nullable: true
+             length: 255
+             column: expected_delivery_date_end
+         navisionFlag:
+             type: text
+             nullable: true
+             length: 255
+             column: navision_flag
+         deliveryDayMin:
+             type: text
+             nullable: true
+             length: 255
+             column: delivery_day_min
+         deliveryDayMax:
+             type: text
+             length: 255
+             nullable: true
+             column: delivery_day_max
+         additionalInboundInfo:
+             type: text
+             nullable: true
+             length: 255
+             column: additional_inbound_info
+         expectedGm1:
+             type: text
+             length: 255
+             nullable: true
+             column: expected_gm1
+         expectedGm2:
+             type: text
+             length: 255
+             nullable: true
+             column: expected_gm2
+         expectedGm3:
+             type: text
+             length: 255
+             nullable: true
+             column: expected_gm3
+         sumGrossWeight:
+             type: text
+             nullable: true
+             length: 255
+             column: sum_gross_weight
+         numberSeparatePackages:
+             type: text
+             length: 255
+             nullable: true
+             column: number_separate_packages
+         delayReasons:
+             type: text
+             length: 255
+             nullable: true
+             column: delay_reasons
+         hideOriginalPrice:
+             type: text
+             length: 255
+             nullable: true
+             column: hide_original_price
+         producerName:
+             type: text
+             length: 255
+             nullable: true
+             column: producer_name
+         producerAddress:
+             type: text
+             length: 255
+             nullable: true
+             column: producer_address
+         additional2mhService:
+             type: text
+             length: 255
+             nullable: true
+             column: additional_2mh_service
+         additional2mhServicePrice:
+             type: text
+             length: 255
+             nullable: true
+             column: additional_2mh_service_price
+         isBundle:
+             type: text
+             length: 255
+             nullable: true
+             column: is_bundle
+         idCatalogConfigWestwing:
+             type: text
+             length: 255
+             nullable: true
+             column: id_catalog_config_westwing
+         designScout:
+             type: text
+             length: 255
+             nullable: true
+             column: design_scout
+         logisticLead:
+             type: text
+             length: 255
+             nullable: true
+             column: logistic_lead
+         idCatalogSimpleWestwing:
+             type: text
+             length: 255
+             nullable: true
+             column: id_catalog_simple_westwing
+         simple:
+             type: text
+             length: 255
+             nullable: true
+         variation:
+             type: text
+             length: 255
+             nullable: true
+         brand:
+             type: text
+             length: 255
+             nullable: true
+         supplier:
+             type: text
+             length: 255
+             nullable: true
+         supplierIdentifier:
+             type: text
+             length: 255
+             nullable: true
+             column: supplier_identifier
+         configGroup:
+             type: text
+             length: 255
+             nullable: true
+             column: config_group
+         attributeSet:
+             type: text
+             length: 255
+             nullable: true
+             column: attribute_set
+         categories:
+             type: text
+             length: 255
+             nullable: true
+         idCatalogConfig:
+             type: text
+             nullable: true
+             length: 255
+             column: id_catalog_config
+         skuConfig:
+             type: text
+             nullable: true
+             length: 255
+             column: sku_config
+         statusConfig:
+             type: text
+             length: 255
+             nullable: true
+             column: status_config
+         name:
+             type: text
+             length: 255
+             nullable: true
+         nameOther:
+             type: text
+             length: 255
+             nullable: true
+             column: name_other
+         description:
+             type: text
+             nullable: true
+             length: 255
+         editorOpinion:
+             type: text
+             length: 255
+             nullable: true
+             column: editor_opinion
+         choiceOfDescription:
+             type: text
+             length: 255
+             nullable: true
+             column: choice_of_description
+         displayAsOutOfStock:
+             type: text
+             length: 255
+             nullable: true
+             column: display_as_out_of_stock
+         petStatus:
+             type: text
+             length: 255
+             nullable: true
+             column: pet_status
+         petApproved:
+             type: text
+             length: 255
+             nullable: true
+             column: pet_approved
+         activatedAt:
+             type: string
+             nullable: true
+             column: activated_at
+         skuSupplierConfig:
+             type: text
+             nullable: true
+             length: 255
+             column: sku_supplier_config
+         nameSupplier:
+             type: text
+             nullable: true
+             length: 255
+             column: name_supplier
+         origin:
+             type: text
+             nullable: true
+             length: 255
+         deliveryPeriod:
+             type: text
+             nullable: true
+             length: 255
+             column: delivery_period
+         note:
+             type: text
+             nullable: true
+             length: 255
+         designer:
+             type: text
+             nullable: true
+             length: 255
+         color:
+             type: text
+             nullable: true
+             length: 255
+         mainMaterial:
+             type: text
+             nullable: true
+             length: 255
+             column: main_material
+         finish:
+             type: text
+             nullable: true
+             length: 255
+         measures:
+             type: text
+             nullable: true
+             length: 255
+         weight:
+             type: text
+             nullable: true
+             length: 255
+         details:
+             type: text
+             nullable: true
+             length: 255
+         packageHeight:
+             type: text
+             nullable: true
+             length: 255
+             column: package_height
+         packageLength:
+             type: text
+             nullable: true
+             length: 255
+             column: package_length
+         packageWidth:
+             type: text
+             nullable: true
+             length: 255
+             column: package_width
+         packageWeight:
+             type: text
+             nullable: true
+             length: 255
+             column: package_weight
+         shortDescription:
+             type: text
+             nullable: true
+             length: 255
+             column: short_description
+         careLabel:
+             type: text
+             length: 255
+             nullable: true
+             column: care_label
+         nextSimpleNr:
+             type: text
+             nullable: true
+             length: 255
+             column: next_simple_nr
+         brandNameForThemeCampaigns:
+             type: text
+             nullable: true
+             length: 255
+             column: brand_name_for_theme_campaigns
+         adventDay:
+             type: text
+             nullable: true
+             length: 255
+             column: advent_day
+         adventUrl:
+             type: text
+             nullable: true
+             length: 255
+             colunm: advent_url
+         adventPath:
+             type: text
+             nullable: true
+             length: 255
+             column: advent_path
+         overwriteDeliveryPeriod:
+             type: text
+             nullable: true
+             length: 255
+             column: overwrite_delivery_period
+         isSeoRelevant:
+             type: text
+             length: 255
+             nullable: true
+             column: is_seo_relevant
+         exportStatic:
+             type: text
+             nullable: true
+             length: 255
+             column: export_static
+         isHybrisProduct:
+             type: text
+             nullable: true
+             length: 255
+             column: is_hybris_product
+         hasDeliveryGuarantee:
+             type: text
+             nullable: true
+             length: 255
+             column: has_delivery_guarantee
+         netPurchasePrice:
+             type: text
+             length: 255
+             nullable: true
+             column: net_purchase_price
+         netPurchasePriceDiscounted:
+             type: text
+             length: 255
+             nullable: true
+             column: net_purchase_price_discounted
+         supplierProductNumber:
+             type: text
+             nullable: true
+             length: 255
+             column: supplier_product_number
+         supplierProductName:
+             type: text
+             nullable: true
+             length: 255
+             column: supplier_product_name
+         localStock:
+             type: text
+             nullable: true
+             length: 255
+             column: local_stock
+         globalStock:
+             type: text
+             nullable: true
+             length: 255
+             column: global_stock
+         package1Length:
+             type: text
+             nullable: true
+             length: 255
+             column: package1_length
+         package1Height:
+             type: text
+             length: 255
+             nullable: true
+             column: package1_height
+         package1Width:
+             type: text
+             nullable: true
+             length: 255
+             column: package1_width
+         package1Weight:
+             type: text
+             length: 255
+             nullable: true
+             column: package1_weight
+         package2Length:
+             type: text
+             nullable: true
+             length: 255
+             column: package2_length
+         package2Height:
+             type: text
+             length: 255
+             nullable: true
+             column: package2_height
+         package2Width:
+             type: text
+             nullable: true
+             length: 255
+             column: package2_width
+         package2Weight:
+             type: text
+             length: 255
+             nullable: true
+             column: package2_weight
+         package3Length:
+             type: text
+             nullable: true
+             length: 255
+             column: package3_length
+         package3Height:
+             type: text
+             length: 255
+             nullable: true
+             column: package3_height
+         package3Width:
+             type: text
+             nullable: true
+             length: 255
+             column: package3_width
+         package3Weight:
+             type: text
+             length: 255
+             nullable: true
+             column: package3_weight
+         color1:
+             type: text
+             length: 255
+             nullable: true
+             column: color_1
+         color2:
+             type: text
+             length: 255
+             nullable: true
+             column: color_2
+         color3:
+             type: text
+             nullable: true
+             length: 255
+             column: color_3
+         colorCharacteristic:
+             type: text
+             nullable: true
+             length: 255
+             column: color_characteristic
+         position:
+             type: text
+             nullable: true
+             length: 255
+         additionalCampaigns:
+             type: text
+             nullable: true
+             length: 255
+             column: additional_campaigns
+         statusSimple:
+             type: text
+             nullable: true
+             length: 255
+             column: status_simple
+         expectedLogisticsCost:
+             type: text
+             nullable: true
+             length: 255
+             column: expected_logistics_cost
+         discountLevel:
+             type: text
+             nullable: true
+             length: 255
+             column: discount_level
+         blowoutRound:
+             type: text
+             nullable: true
+             length: 255
+             column: blowout_round
+         allowMultiplePo:
+             type: text
+             length: 255
+             nullable: true
+             column: allow_multiple_p
+         expires_at:
+             type: datetime
+             nullable: true
+         created_at:
+             type: datetime
+             nullable: true
+         updated_at:
+             type: datetime
+             nullable: true
+         checked:
+              type: boolean
+              nullable: true
+         validated:
+              type: boolean
+#              required: true
+#              default: 1     
+              nullable: true    
+         isValid:
+              type: boolean
+#              required: true
+#              default: 1 
+              column: is_valid
+              nullable: true           
+         isRejected:
+              type: boolean
+#              required: true
+#              default: 1
+              nullable: true
+              column: is_rejected
+  
+         link:
+              type: text
+              length: 255             
+              nullable: true
+#         comment_id:
+#              type: text
+#              length: 255             
+#              nullable: true      
+                   
+    manyToOne:
+      campaign:
+        targetEntity: Campaign
+        inversedBy: products 
+        cascade: [persist]
+        joinColumn:
+          name: campaign_id
+          referencedColumnName: id
+          
+          
+    oneToOne:
+      product_comment:
+        targetEntity: Comment
+        mappedBy: product
+        orphanRemoval: true
+        cascade: [persist]
+        joinColumn:
+          name: comment_id
+          referencedColumnName: id
+      
+                          
+    lifecycleCallbacks:
+        prePersist: [ setCreatedAtValue ]
+        preUpdate: [ setUpdatedAtValue ]

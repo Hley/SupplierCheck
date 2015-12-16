@@ -1,0 +1,6 @@
+AuthUserFile /home/testsymfony/.htpasswd
+AuthName "Access protected" 
+AuthType Basic 
+<Limit GET POST>
+require valid-user
+</Limit>
