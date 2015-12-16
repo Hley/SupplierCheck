@@ -4,8 +4,8 @@ parameters:
     database_host: mysql1.alwaysdata.com
     database_port: '3306'
     database_name: suppliercheckdev_db
-    database_user: '116522'
-    database_password: microsoft
+    database_user: 
+    database_password: 
     mailer_transport: smtp
     mailer_host: ~
     mailer_user:  
