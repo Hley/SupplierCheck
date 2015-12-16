@@ -73,8 +73,8 @@ doctrine:
 swiftmailer:
     transport: "gmail"
     host:      ""
-    username:  "ashley.lubin@westwing.fr"
-    password:  "14Ashley"
+    username:  
+    password:  
     spool:     { type: memory }
 
 #swiftmailer:
